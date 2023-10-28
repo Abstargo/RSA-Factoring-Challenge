@@ -1,22 +1,15 @@
 #include "factor.h"
-#include <stdint.h>
 
-int factorize(char *buffer)
+void factorize(unsigned long num)
 {
+    unsigned long i;
 
-    uint32_t num;
-	uint32_t i;
-
-    num = atoi(buffer);
-
-    for (i = 2; i < num; i++)
+    for(i = 2; i <= num; i++)
     {
         if (num % i == 0)
         {
-            printf("%d=%d*%d\n", num, num/i, i);
-            break;
+            printf ("%lu=%lu*%lu\n", num, i, num / i);
+            return;
         }
     }
-
-    return (0);
 }
