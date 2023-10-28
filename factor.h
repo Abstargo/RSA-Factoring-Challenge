@@ -7,6 +7,6 @@
 #include <stdint.h>
 #define _GNU_SOURCE
 
-void factorize(unsigned long num);
+void factorize(unsigned long long num);
 
 #endif
